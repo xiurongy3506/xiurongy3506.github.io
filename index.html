@@ -67,48 +67,49 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
+        <li><a href="#who">WHO</a></li>
+        <li><a href="#what">WHAT</a></li>
+        <li><a href="#where">WHERE</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center">
+<div id = "who" class="container-fluid bg-1 text-center">
   <h3 class="margin">Who Am I?</h3>
-  <img src="xiu.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm a SEP Student</h3>
+  <img src="xiu.png" class="img-responsive img-circle margin" style="display:inline" alt="me" width="250" height="250">
+  <h3>Xiurong Yu</h3>
+  <h3>Class of 2019 SEP Student</h3>
 </div>
 
 <!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
+<div id = "what" class="container-fluid bg-2 text-center">
   <h3 class="margin">What Am I?</h3>
-  <p>I am a Junior in High School of Telecommunication Arts and Technology who is currently taking Software Engineering (SEP). </p>
+  <p>I am a Senior currently taking Software Engineering (SEP) at High School of Telecommunication Arts and Technology. </p>
   <a href="#" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-search"></span> Search
   </a>
 </div>
 
 <!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
+<div id = "where" class="container-fluid bg-3 text-center">    
   <h3 class="margin">Where To Find Me?</h3><br>
   <div class="row">
     
     <div class="col-sm-4">
       <p>You can visit my projets at <a href="https://github.com/xiurongy3506?tab=repositories">github.</a></p>
-      <img src="http://www.freeiconspng.com/uploads/github-logo-icon-30.png" class="image" alt="Image">
+      <img src="./img/github-logo.png" class="image" alt="Image">
     </div>
     
     <div class="col-sm-4"> 
       <p>You can check out my profolio at my <a href="https://sites.google.com/a/hstat.org/xiurongy3506sep11/">google site</a></p>
-      <img src="http://www.intenso.pl/google/sites/default/files/article_images/7sites-128.png" class="image" alt="Image">
+      <img src="./img/google-sites.png" class="image" alt="Image">
     </div>
     
     <div class="email"> 
       <p>You can reach me at xiurongy3506@hstat.org</p>
-      <img src="http://icons.iconarchive.com/icons/dtafalonso/android-l/256/Gmail-icon.png" class="image" alt="Image">
+      <img src="./img/gmail-icon.png" class="image" alt="Image">
     </div>
   </div>
 </div>
@@ -117,6 +118,38 @@
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
+
+<script>
+//code from W3 school
+    $(document).ready(function() {
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    })
+</script>
 
 </body>
 </html>
